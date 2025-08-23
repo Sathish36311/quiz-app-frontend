@@ -1,0 +1,117 @@
+.page {
+    min-height: 100dvh;
+    padding: 24px;
+    box-sizing: border-box;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.title {
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+.backBtn {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem .75rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color .15s ease, border-color .15s ease, transform .08s ease;
+}
+
+.backBtn:hover {
+    background: #f3f4f7;
+    border-color: #d7dce3;
+}
+
+.emptyState {
+    margin: 24px 0 0;
+    color: var(--muted);
+    font-size: 1rem;
+    background: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.tableWrap {
+    width: 100%;
+    max-width: 960px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.quizTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.975rem;
+}
+
+.quizTable thead th {
+    text-align: left;
+    padding: 12px 14px;
+    background: #f6f7fb;
+    color: #374151;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.quizTable td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    color: #111827;
+    vertical-align: middle;
+}
+
+.quizTable tbody tr:hover td {
+    background: #f2f6ff;
+}
+
+
+.num {
+    text-align: left;
+    font-variant-numeric: tabular-nums;
+}
+
+.takeQuizBtn {
+    padding: 0.5rem 0.9rem;
+    background-color: var(--brand);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .2s ease, transform .08s ease, box-shadow .2s ease;
+    box-shadow: 0 8px 18px rgba(144, 74, 214, 0.25);
+}
+
+.takeQuizBtn:hover {
+    background-color: var(--brand-strong);
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px rgba(144, 74, 214, 0.35);
+}
+
+.takeQuizBtn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}

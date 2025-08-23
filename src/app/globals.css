@@ -1,0 +1,25 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --brand: #904AD6;
+  --brand-strong: #6c2cac;
+  --border: #d0d2d6;
+  --text: #111;
+  --muted: #9aa0a6;
+  --bg: #fff;
+  --card: #ffffff;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}

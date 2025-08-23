@@ -1,0 +1,154 @@
+.page {
+  min-height: 100dvh;
+  padding: 24px;
+  box-sizing: border-box;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.backBtn,
+.takeQuizBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.08s ease, box-shadow 0.2s ease;
+}
+
+.backBtn {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 10px;
+}
+
+.backBtn:hover {
+  background: #f3f4f7;
+  border-color: #d7dce3;
+}
+
+.takeQuizBtn {
+  background-color: var(--brand);
+  color: #fff;
+  border: none;
+  box-shadow: 0 8px 18px rgba(144, 74, 214, 0.25);
+}
+
+.takeQuizBtn:hover {
+  background-color: var(--brand-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(144, 74, 214, 0.35);
+}
+
+.takeQuizBtn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.tableWrap,
+.questionSection {
+  width: 100%;
+  max-width: 960px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.questionItem {
+  margin-bottom: 1rem;
+}
+
+.optionItem {
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.35rem;
+  border: 1px dashed #e5e7eb;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.correct {
+  background: #ecfdf5;
+}
+
+.userChoice {
+  background: #fef2f2;
+}
+
+.correctTag {
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.wrongTag {
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.optionLabelWrap {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.optionLabel {
+  margin-left: 0.35rem;
+}
+
+.quizTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.975rem;
+}
+
+.quizTable thead th {
+  text-align: left;
+  padding: 12px 14px;
+  background: #f6f7fb;
+  color: #374151;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.quizTable td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  color: #111827;
+  vertical-align: top;
+}
+
+.quizTable tbody tr:hover td {
+  background: #f2f6ff;
+}
+
+.num {
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,87 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: min(440px, 100%);
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: var(--bg);
+  border-radius: 8px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+.input,
+.number {
+  padding: 0.75rem;
+  border: 1px solid var(--muted);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input:focus,
+.number:focus {
+  border-color: var(--brand);
+  outline: none;
+}
+
+.helper {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.fieldset {
+  border: none;
+  padding: 0;
+}
+
+.legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+}
+
+.radioRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.submit {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--brand);
+  color: var(--bg);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit:hover {
+  background-color: var(--brand-strong);
+}
+
+.submit:disabled {
+  background-color: var(--bg);
+  cursor: not-allowed;
+}
