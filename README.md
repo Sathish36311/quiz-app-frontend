@@ -39,10 +39,33 @@ quiz-app-frontend/
    ```bash
    git clone https://github.com/yourusername/quiz-frontend.git
    cd quiz-frontend
+   ```
 2. **Install dependencies**
+   ```
    npm install
-    # or
-    yarn install
-   
+   # or
+   yarn install
+   ``` 
 4. **Setup environment variables in .env.local**
-  NEXT_PUBLIC_BASE_URL=http://localhost:8000/api
+   ```
+   NEXT_PUBLIC_BASE_URL=http://localhost:8000/api
+   ```
+5. **Open http://localhost:3000**
+
+---
+
+## Features
+- User authentication (login/register)
+- Quiz creation (topic, difficulty, number of questions)
+- AI-generated questions
+- Quiz-taking with progress tracking
+- Review past quiz results
+
+---
+
+## Build for Production
+```
+   npm run build
+   npm start
+```
+
