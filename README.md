@@ -68,4 +68,9 @@ quiz-app-frontend/
    npm run build
    npm start
 ```
+---
+## I faced a few challenges while building a quiz application using NestJS and Django:
 
+- Difficulty in parsing and handling AI responses effectively
+- Limited understanding of how different components communicate with each other
+- Lack of clarity on the standard practices to follow for folder structure and file organization
