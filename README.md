@@ -13,6 +13,7 @@ It provides a responsive UI where users can register/login, generate quizzes usi
 ---
 
 ## 📂 Project Structure
+```
 quiz-app-frontend/
 │── public/ # Static assets (favicon, images, etc.)
 │── src/
@@ -28,7 +29,7 @@ quiz-app-frontend/
 │ └── utils/ # Helper functions
 │── package.json
 │── .env.local # Environment variables
-
+```
 
 ---
 
