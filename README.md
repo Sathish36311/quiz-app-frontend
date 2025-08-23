@@ -69,8 +69,22 @@ quiz-app-frontend/
    npm start
 ```
 ---
-## I faced a few challenges while building a quiz application using NestJS and Django:
+## Challenges Faced
 
-- Difficulty in parsing and handling AI responses effectively
-- Limited understanding of how different components communicate with each other
-- Lack of clarity on the standard practices to follow for folder structure and file organization
+While developing the quiz application using **NestJS** and **Django**, I encountered the following challenges:
+- Parsing and handling AI responses effectively  
+- Understanding component-to-component communication  
+- Lack of clarity on standard practices for folder structure and file organization  
+
+## Planned Improvements
+
+There are several features I planned to implement but haven’t yet:
+- **Authentication Guard** to secure routes  
+- **Automatic logout on token expiry**  
+- **Table filters** for easier data management  
+- **Toast notifications** for user feedback  
+- **Pagination** for handling large datasets  
+- **Global error handling** for consistent error responses  
+- Restricting navigation so that users can proceed to the next question only after answering the current one.
+  
+---
