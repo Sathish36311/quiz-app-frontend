@@ -42,7 +42,6 @@ export default function QuizForm({ initial, onSubmit }: Props) {
             setTopic('')
             setNumQuestions(5)
             setDifficulty('easy')
-            setErrors({})
         } catch (error) {
             console.log(error);
             alert('Failed to create quiz. Please try again.')
