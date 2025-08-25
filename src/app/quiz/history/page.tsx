@@ -8,7 +8,6 @@ import styles from './History.module.css'
 
 export default function HistoryPage() {
     const [quizzes, setQuizzes] = useState<Quiz[]>([]);
-    const [loading, setLoading] = useState(true);
     const router = useRouter();
 
     useEffect(() => {
