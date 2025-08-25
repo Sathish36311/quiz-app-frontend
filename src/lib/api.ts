@@ -52,13 +52,13 @@ export async function getQuizById(id: number): Promise<Quiz> {
         method: 'GET'
     });
     console.log(response);
-    
-
     if (!response.ok) {
         throw new Error(`Failed to fetch quiz with ID ${id}`);
     }
 
     const data = await response.json();
+    console.log(data);
+    
     return data as Quiz;
 }
 
@@ -67,11 +67,15 @@ export async function getUserQuizzes(): Promise<Quiz[]> {
         method: 'GET'
     })
 
+    console.log(response);
+    
     if (!response.ok) {
         throw new Error(`Failed to retrieve Quiz History`)
     }
 
     const data = await response.json();
+    console.log(data);
+    
     return data as Quiz[];
 }
 
