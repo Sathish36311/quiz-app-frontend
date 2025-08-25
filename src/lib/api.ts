@@ -48,7 +48,7 @@ export async function createQuiz(params: QuizParams): Promise<Quiz> {
 
 // api call to get the quiz for the given id
 export async function getQuizById(id: number): Promise<Quiz> {
-    const response = await fetchWithAuth(`${BASE_URL}/quiz/take/${id}`, {
+    const response = await fetchWithAuth(`${BASE_URL}/quiz/take/${id}/`, {
         method: 'GET'
     });
 
@@ -61,7 +61,7 @@ export async function getQuizById(id: number): Promise<Quiz> {
 }
 
 export async function getUserQuizzes(): Promise<Quiz[]> {
-    const response = await fetchWithAuth(`${BASE_URL}/quizzes/user`, {
+    const response = await fetchWithAuth(`${BASE_URL}/quizzes/user/`, {
         method: 'GET'
     })
 
