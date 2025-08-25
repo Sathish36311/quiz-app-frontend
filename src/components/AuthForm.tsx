@@ -11,7 +11,6 @@ export default function AuthForm() {
     const [error, setError] = useState('');
     const router = useRouter();
 
-    // Method to login a user
     const handleLogin = async (event: React.FormEvent) => {
         event.preventDefault();
         setError('');
@@ -39,14 +38,13 @@ export default function AuthForm() {
         }
     };
 
-    // Method to register a new user
     const handleRegister = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
 
         const form = e.target as HTMLFormElement;
         const username = (form.elements.namedItem('username') as HTMLInputElement).value;
-        const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+       .namedItem('email') as HTMLInputElement).value;
         const password = (form.elements.namedItem('password') as HTMLInputElement).value;
 
         try {
@@ -74,14 +72,16 @@ export default function AuthForm() {
                     <>
                         <form className={styles.form} onSubmit={handleLogin}>
                             <h2>Login</h2>
-                            <input type="text" name='username' placeholder="Username" required />
-                            <input type="password" name='password' placeholder="Password" required />
-                            <button className={styles.submit} type="submit" >Login</button>
+                            <input type="text" name="username" placeholder="Username" required />
+                            <input type="password" name="password" placeholder="Password" required />
+                            <button className={styles.submit} type="submit">Login</button>
                             {error && <p className={styles.error}>{error}</p>}
                         </form>
                         <div className={styles.bottomText}>
-                            <span>Don't have an account?{' '}</span>
-                            <button type="button" className={styles.linkButton} onClick={() => setMode('register')}>Register User</button>
+                            <span>Don&apos;t have an account? </span>
+                            <button type="button" className={styles.linkButton} onClick={() => setMode('register')}>
+                                Register User
+                            </button>
                         </div>
                     </>
                 ) : (
@@ -95,8 +95,10 @@ export default function AuthForm() {
                             {error && <p className={styles.error}>{error}</p>}
                         </form>
                         <div className={styles.bottomText}>
-                            <span>Already have an account?{' '}</span>
-                            <button type="button" className={styles.linkButton} onClick={() => setMode('login')}>Login</button>
+                            <span>Already have an account? </span>
+                            <button type="button" className={styles.linkButton} onClick={() => setMode('login')}>
+                                Login
+                            </button>
                         </div>
                     </>
                 )}
