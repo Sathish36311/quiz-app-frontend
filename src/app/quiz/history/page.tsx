@@ -18,42 +18,12 @@ export default function HistoryPage() {
             } catch (error) {
                 console.error('Failed to retrieve quiz history', error);
                 alert('Unable to fetch quiz history');
-            } finally {
-                setLoading(false)
             }
         }
         fetchQuizHistory();
     }, []);
 
     return (
-        // <div>
-        //     <button onClick={() => router.back()}>Back</button>
-        //     <h1>Your Quiz History</h1>
-        //     {quizzes.length === 0 ? ('No Quizzes Found!!') : (
-        //         <table className={styles.quizTable}>
-        //             <thead>
-        //                 <tr>
-        //                     <th>Topic</th>
-        //                     <th>Score</th>
-        //                     <th>Questions</th>
-        //                     <th>Action</th>
-        //                 </tr>
-        //             </thead>
-        //             <tbody>
-        //                 {quizzes.map((quiz) => (
-        //                     <tr key={quiz.id}>
-        //                         <td>{quiz.topic}</td>
-        //                         <td>{quiz.score}</td>
-        //                         <td>{quiz.number_of_questions}</td>
-        //                         <td>
-        //                             <button className={styles.takeQuizBtn} onClick={() => router.push(`/quiz/take/?id=${quiz.id}`)}>Take Quiz</button>
-        //                         </td>
-        //                     </tr>
-        //                 ))}
-        //             </tbody>
-        //         </table>
-        //     )}
-        // </div>
         <div className={styles.page}>
             <button className={styles.backBtn} onClick={() => router.back()}>Back</button>
             <h1 className={styles.title}>Your Quiz History</h1>
