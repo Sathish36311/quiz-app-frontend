@@ -39,7 +39,7 @@ export async function fetchWithAuth(url: string, options: RequestInit = {}): Pro
 // function to create quiz
 export async function createQuiz(params: QuizParams): Promise<Quiz> {
     const payload = { topic: params.topic, number_of_questions: params.numQuestions, difficulty: params.difficulty }
-    const response = await fetchWithAuth(`${BASE_URL}/quiz/create`, {
+    const response = await fetchWithAuth(`${BASE_URL}/quiz/create/`, {
         method: 'POST',
         body: JSON.stringify(payload)
     });
@@ -72,7 +72,7 @@ export async function getUserQuizzes(): Promise<Quiz[]> {
 }
 
 export async function saveQuizScore(id: number, score: number): Promise<void> {
-    const response = await fetchWithAuth(`${BASE_URL}/quiz/${id}/update-score`, {
+    const response = await fetchWithAuth(`${BASE_URL}/quiz/${id}/update-score/`, {
         method: 'PATCH',
         body: JSON.stringify({
             score: score,
