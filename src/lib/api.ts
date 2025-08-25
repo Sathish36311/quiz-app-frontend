@@ -51,14 +51,11 @@ export async function getQuizById(id: number): Promise<Quiz> {
     const response = await fetchWithAuth(`${BASE_URL}/quiz/take/${id}/`, {
         method: 'GET'
     });
-    console.log(response);
     if (!response.ok) {
         throw new Error(`Failed to fetch quiz with ID ${id}`);
     }
 
     const data = await response.json();
-    console.log(data);
-    
     return data as Quiz;
 }
 
@@ -66,16 +63,11 @@ export async function getUserQuizzes(): Promise<Quiz[]> {
     const response = await fetchWithAuth(`${BASE_URL}/quizzes/user/`, {
         method: 'GET'
     })
-
-    console.log(response);
-    
     if (!response.ok) {
         throw new Error(`Failed to retrieve Quiz History`)
     }
 
     const data = await response.json();
-    console.log(data);
-    
     return data as Quiz[];
 }
 
