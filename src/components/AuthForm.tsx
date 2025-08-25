@@ -44,7 +44,7 @@ export default function AuthForm() {
 
         const form = e.target as HTMLFormElement;
         const username = (form.elements.namedItem('username') as HTMLInputElement).value;
-       .namedItem('email') as HTMLInputElement).value;
+        const email = (form.elements.namedItem('email') as HTMLInputElement).value;
         const password = (form.elements.namedItem('password') as HTMLInputElement).value;
 
         try {
