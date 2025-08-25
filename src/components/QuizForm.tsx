@@ -19,7 +19,6 @@ export default function QuizForm({ initial, onSubmit }: Props) {
     const [topic, setTopic] = useState(initial?.topic ?? '');
     const [numQuestions, setNumQuestions] = useState<number>(initial?.numQuestions ?? 5);
     const [difficulty, setDifficulty] = useState<Difficulty>(initial?.difficulty ?? 'easy');
-    const [errors, setErrors] = useState<FormErrors>({});
     const [submitting, setSubmitting] = useState(false);
 
     /**
@@ -30,7 +29,6 @@ export default function QuizForm({ initial, onSubmit }: Props) {
         const e: FormErrors = {};
         if (!topic.trim()) e.topic = 'Please enter a topic.';
         if (numQuestions < 5 || numQuestions > 20) { e.numQuestions = 'Number of questions must be between 5 and 20.' }
-        setErrors(e);
         return Object.keys(e).length === 0;
     }
 
