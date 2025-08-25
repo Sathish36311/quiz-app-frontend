@@ -51,6 +51,8 @@ export async function getQuizById(id: number): Promise<Quiz> {
     const response = await fetchWithAuth(`${BASE_URL}/quiz/take/${id}/`, {
         method: 'GET'
     });
+    console.log(response);
+    
 
     if (!response.ok) {
         throw new Error(`Failed to fetch quiz with ID ${id}`);
